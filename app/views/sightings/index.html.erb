@@ -33,3 +33,22 @@
 <br>
 
 <%= link_to 'New Sighting', new_sighting_path %>
+
+
+<p>
+  <!-- Input area for new sighting -->
+  <div class="field">
+    <label for="sighting_name">Name</label><br>
+    <input type="text" name="sighting[name]" id="sighting_name" />
+  </div>
+  <div class="field">
+    <label for="sighting_region">Vintage</label><br>
+    <select id="sighting_region" name="sighting[region]">
+      <option value="North America" selected="selected">North America</option>
+      <option value="South America">South America</option>
+      <option value="Europe">Europe</option>
+    </select>
+  </div>
+  <input type="hidden" name="sighting[animal_id]" id="animal_id" value="<%=@animal_id%>"/>
+  <button id="add_new_sighting_button">Add New Sighting</button>
+</p>
